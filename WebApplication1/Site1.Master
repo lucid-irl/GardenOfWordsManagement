@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" 
+    Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Garden of Word</title>
+
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/Garden-of-Words-Cover.png" width="50" height="30"/>
+                    Garden of Words
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="homepage.aspx">Home</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">About Us</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Terms</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Self-help</a>
+                          <a class="dropdown-item" href="#">Comic</a>
+                          <a class="dropdown-item" href="#">Drama</a>
+                          <a class="dropdown-item" href="#">Best Seller</a>
+                          <a class="dropdown-item" href="#">Top picks</a>
+                          <a class="dropdown-item" href="#">Tâm lý</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Sách trưng bày! <br />(nghĩa là đéo bán)<br /></a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">
+                                View Books</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server">
+                                User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server">
+                                Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">
+                                Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">
+                                Hello user</asp:LinkButton>
+                        </li>
+                    </ul>
+                  </div>
+            </nav>
+        </div>
+
+        <!--Main Content Placeholder-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Main Content Placeholder-->
+
+        <!--Footer-->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row" >
+                    <div class="col-xs-11 col-sm-11 col-md-12 text-center">
+                        <p >
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" ForeColor="#424949">
+                                Admin Login</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" ForeColor="#424949">
+                                Author Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" ForeColor="#424949">
+                                Publisher Management Login</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" ForeColor="#424949">
+                                Book Invent</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" ForeColor="#424949">
+                                Member Management</asp:LinkButton>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer2" class="container-fluid">
+                <div class="row" >
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>&copy All copyright is đéo có! <a class="footerlinks" href="https://www.facebook.com/kietchay100"
+                            style="color:#BDC3C7" target="_blank">Trần Huy Hoàng</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
