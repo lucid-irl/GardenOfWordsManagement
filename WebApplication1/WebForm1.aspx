@@ -4,7 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>
-        Đây là phần web bán sách hê hê hê...
-        <br />Cái trên và dưới là mát tơ bây<br />
+        Đây là phần master page của web bán sách hê hê hê...
     </h1>
 </asp:Content>
