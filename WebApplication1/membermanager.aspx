@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <h4>Thông tin chi tiết</h4>
+                                    <h4>Quản lý member</h4>
                                 </center>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <h4>Danh sách thành viên</h4>
+                                    <h4>Danh sách member</h4>
                                 </center>
                             </div>
                         </div>

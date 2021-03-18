@@ -186,7 +186,7 @@
                                 <label>Quận/Huyện</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox5" runat="server" 
-                                        placeholder="không có cũng được..." TextMode="Email"></asp:TextBox>
+                                        placeholder="không có cũng được..."></asp:TextBox>
                                 </div>
                             </div>
 
@@ -217,7 +217,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" 
-                                        runat="server" Text="Đăng kí" />
+                                        runat="server" Text="Đăng kí" OnClick="Button1_Click" />
                                 </div>
                             </div>
                         </div>
