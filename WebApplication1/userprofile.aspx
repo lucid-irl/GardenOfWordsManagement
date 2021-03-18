@@ -1,18 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="WebApplication1.usersignup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="WebApplication1.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6">
+
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img width="100" src="imgs/bookstore/028-location.png" />
+                                    <img width="100" src="imgs/bookstore/026-open-book.png" />
                                 </center>
                             </div>
                         </div>
@@ -20,7 +20,10 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <h4>Đăng kí thành viên</h4>
+                                    <h4>Thông tin của bạn</h4>
+                                    <span>Trạng thái -</span>
+                                    <asp:Label class="badge badge-success" ID="Label1" 
+                                        runat="server" Text="Vjp Pro"></asp:Label>
                                 </center>
                             </div>
                         </div>
@@ -41,15 +44,15 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Tên đăng nhập</label>
+                                <label>Mật khẩu hiện tại</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox7" runat="server" 
-                                        placeholder="user id"></asp:TextBox>
+                                        TextMode="Password"></asp:TextBox>
                                 </div>
                             </div>
 
                             <div class="col-md-4">
-                                <label>Mật khẩu</label>
+                                <label>Mật khẩu mới</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox8" runat="server" 
                                         TextMode="Password"></asp:TextBox>
@@ -57,7 +60,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label>Nhập lại mật khẩu</label>
+                                <label>Nhập lại mật khẩu mới</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox9" runat="server" 
                                         TextMode="Password"></asp:TextBox>
@@ -214,11 +217,13 @@
 
                         
                         <div class="row">
-                            <div class="col">
+                            <div class="col-8 mx-auto">
+                                <center>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" 
-                                        runat="server" Text="Đăng kí" />
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" ID="Button1" 
+                                        runat="server" Text="Cập nhật" />
                                 </div>
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -226,8 +231,48 @@
 
                 <a href="homepage.aspx"><< Back to home</a><br /><br />
             </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <img width="100" src="imgs/bookstore/005-books.png" />
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <h4>Thông tin đơn hàng</h4>
+                                    <asp:Label class="badge badge-primary" ID="Label2" 
+                                        runat="server" Text="Chi tiết trạng thái đơn hàng"></asp:Label>
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <hr />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <asp:GridView class="table table-striped table-bordered" 
+                                    ID="GridView1" runat="server"></asp:GridView>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
-
 
 </asp:Content>
