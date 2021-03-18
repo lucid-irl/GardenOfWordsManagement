@@ -10,8 +10,6 @@
                 <div class="card">
                     <div class="card-body">
 
-                        
-
                         <div class="row">
                             <div class="col">
                                 <center>
@@ -41,7 +39,7 @@
                                 <label>ID Order</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox8" runat="server"
-                                        placeholder="tên tác giả">
+                                        placeholder="order number">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -63,10 +61,10 @@
                         <div class="row">
                             
                             <div class="col-md-6">
-                                <label>Tên Order</label>
+                                <label>Giá Order</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox2" runat="server"
-                                        placeholder="tên order" ReadOnly="True">
+                                        placeholder="order cost" ReadOnly="True">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -76,7 +74,7 @@
                                 <label>Tên thành viên</label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="TextBox1" runat="server"
-                                        placeholder="tên thành viên" ReadOnly="True">
+                                        placeholder="member name" ReadOnly="True">
                                     </asp:TextBox>
                                 </div>
                             </div>
