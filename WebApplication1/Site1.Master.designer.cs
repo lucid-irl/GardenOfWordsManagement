@@ -123,6 +123,15 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.LinkButton LinkButton8;
 
         /// <summary>
+        /// LinkButton5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
+
+        /// <summary>
         /// LinkButton10 control.
         /// </summary>
         /// <remarks>

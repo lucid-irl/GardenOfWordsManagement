@@ -39,8 +39,8 @@
                                 <label>ID Tác giả</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox class="form-control" ID="TextBox7" runat="server" 
-                                        TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextBox7" runat="server">
+                                        </asp:TextBox>
                                         <asp:Button class="btn btn-secondary" ID="Button1" 
                                         runat="server" Text="Tìm" />
                                     </div>

@@ -119,6 +119,8 @@
                                 Publisher Management Login</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" ForeColor="#424949">
                                 Book Invent</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" ForeColor="#424949">
+                                Order Infomation</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" ForeColor="#424949">
                                 Member Management</asp:LinkButton>
                         </p>
