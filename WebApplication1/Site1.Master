@@ -111,13 +111,13 @@
                 <div class="row" >
                     <div class="col-xs-11 col-sm-11 col-md-12 text-center">
                         <p >
-                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" ForeColor="#424949">
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" ForeColor="#424949" OnClick="LinkButton6_Click">
                                 Admin Login</asp:LinkButton>
-                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" ForeColor="#424949">
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" ForeColor="#424949" OnClick="LinkButton11_Click">
                                 Author Management</asp:LinkButton>
-                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" ForeColor="#424949">
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" ForeColor="#424949" OnClick="LinkButton12_Click">
                                 Publisher Management Login</asp:LinkButton>
-                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" ForeColor="#424949">
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" ForeColor="#424949" OnClick="LinkButton8_Click">
                                 Book Invent</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" ForeColor="#424949">
                                 Order Infomation</asp:LinkButton>
