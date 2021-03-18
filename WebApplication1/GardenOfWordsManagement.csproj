@@ -1746,6 +1746,7 @@
     <Content Include="imgs\thumpmail_2.png" />
     <Content Include="imgs\thumpmail_3.png" />
     <Content Include="imgs\writer.png" />
+    <Content Include="membermanager.aspx" />
     <Content Include="ordermanager.aspx" />
     <Content Include="publishermanager.aspx" />
     <Content Include="userlogin.aspx" />
@@ -1782,6 +1783,13 @@
     </Compile>
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="membermanager.aspx.cs">
+      <DependentUpon>membermanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="membermanager.aspx.designer.cs">
+      <DependentUpon>membermanager.aspx</DependentUpon>
     </Compile>
     <Compile Include="ordermanager.aspx.cs">
       <DependentUpon>ordermanager.aspx</DependentUpon>
