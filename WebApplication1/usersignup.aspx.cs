@@ -26,6 +26,7 @@ namespace WebApplication1
             {
                 Response.Write("<script>alert('Tên đăng nhập đã tồn tại!');</script>");
                 
+
             }
 
             else
@@ -37,14 +38,7 @@ namespace WebApplication1
 
         bool checkPassword()
         {
-            if (TextBox8.Text.Trim() == TextBox9.Text.Trim())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return TextBox8.Text.Equals(TextBox9.Text);
         }
 
         // kiểm tra tên đăng nhập có tồn tại chưa
@@ -98,7 +92,8 @@ namespace WebApplication1
                 {
                     con.Open();
                 }
-
+                
+                    
                 SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl (full_name,dob,phone,email,city,state,sex,address,member_id,password,account_status) values (@full_name,@dob,@phone,@email,@city,@state,@sex,@address,@member_id,@password,@account_status)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());

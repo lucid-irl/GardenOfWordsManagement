@@ -107,36 +107,43 @@ namespace WebApplication1
 
         void getAuthorByID()
         {
-            try
+            if (TextBox7.Text.Trim().Equals(""))
             {
-                SqlConnection con = new SqlConnection(strcon);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-
-                SqlCommand cmd = new SqlCommand("SELECT * from author_master_tbl where author_id='" + TextBox7.Text.Trim() + "'", con);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                if (dt.Rows.Count >= 1)
-                {
-                    TextBox8.Text = dt.Rows[0][1].ToString();
-                }
-                else
-                {
-                    Response.Write("<script>alert('ID không tồn tại!');</script>");
-                }
-
+                Response.Write("<script>alert('ID Thành viên không được để trống!');</script>");
             }
-            catch (Exception ex)
+            else
             {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-                
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand("SELECT * from author_master_tbl where author_id='" + TextBox7.Text.Trim() + "'", con);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count >= 1)
+                    {
+                        TextBox8.Text = dt.Rows[0][1].ToString();
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('ID không tồn tại!');</script>");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+                }
             }
         }
 

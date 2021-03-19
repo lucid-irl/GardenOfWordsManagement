@@ -3,12 +3,8 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
-            //$(document).ready(function () {
-                //$('.table').DataTable();
-           // });
-
             $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
-            //$('.table1').DataTable();
+            
         });
     </script>
 </asp:Content>
@@ -49,8 +45,10 @@
                                     <div class="input-group">
                                         <asp:TextBox class="form-control" ID="TextBox7" runat="server">
                                         </asp:TextBox>
-                                        <asp:Button class="btn btn-secondary" ID="Button1" 
-                                        runat="server" Text="Tìm" OnClick="Button1_Click" />
+                                        <asp:LinkButton class="btn btn-secondary" ID="Button1" 
+                                        runat="server" Text="Tìm" OnClick="Button1_Click">
+                                            <i class="fas fa-search"></i>
+                                        </asp:LinkButton>
                                     </div>
                                 </div>
                             </div>
@@ -116,8 +114,8 @@
                                 <asp:GridView class="table table-striped table-bordered" 
                                     ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="author_id" DataSourceID="SqlDataSource1">
                                     <Columns>
-                                        <asp:BoundField DataField="author_id" HeaderText="author_id" ReadOnly="True" SortExpression="author_id" />
-                                        <asp:BoundField DataField="author_name" HeaderText="author_name" SortExpression="author_name" />
+                                        <asp:BoundField DataField="author_id" HeaderText="ID Tác giả" ReadOnly="True" SortExpression="author_id" />
+                                        <asp:BoundField DataField="author_name" HeaderText="Tên Tác giả" SortExpression="author_name" />
                                     </Columns>
                                 </asp:GridView>
                             </div>
