@@ -1,5 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="bookinventory.aspx.cs" Inherits="WebApplication1.bookinvent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+       });
+
+       function readURL(input) {
+           if (input.files && input.files[0]) {
+               var reader = new FileReader();
+
+               reader.onload = function (e) {
+                   $('#imgview').attr('src', e.target.result);
+               };
+
+               reader.readAsDataURL(input.files[0]);
+           }
+       }
+
+    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -22,7 +42,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img width="150" src="imgs/bookstore/018-books.png" />
+                                    <img id="imgview" Height="150" src="imgs/bookstore/018-books.png" />
                                 </center>
                             </div>
                         </div>
@@ -35,7 +55,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <asp:FileUpload class="form-control" ID="FileUpload1" runat="server" />
+                                <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload1" runat="server" />
                             </div>
                         </div>
 
@@ -71,12 +91,11 @@
                                 <label>Language</label>
                                 <div class="form-group">
                                    <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
-                                      <asp:ListItem Text="English" Value="English" />
-                                      <asp:ListItem Text="Hindi" Value="Hindi" />
-                                      <asp:ListItem Text="Marathi" Value="Marathi" />
-                                      <asp:ListItem Text="French" Value="French" />
-                                      <asp:ListItem Text="German" Value="German" />
-                                      <asp:ListItem Text="Urdu" Value="Urdu" />
+                                       <asp:ListItem Text="Vietnamese" Value="Vietnamese" />
+                                       <asp:ListItem Text="English" Value="English" />
+                                       <asp:ListItem Text="French" Value="French" />
+                                       <asp:ListItem Text="German" Value="German" />
+                                       <asp:ListItem Text="Japan" Value="Japan" />
                                    </asp:DropDownList>
                                 </div>
                                 <label>Publisher Name</label>
@@ -91,8 +110,8 @@
                                 <label>Author Name</label>
                                 <div class="form-group">
                                    <asp:DropDownList class="form-control" ID="DropDownList3" runat="server">
-                                      <asp:ListItem Text="A1" Value="a1" />
-                                      <asp:ListItem Text="a2" Value="a2" />
+                                      <asp:ListItem Text="A1" Value="A1" />
+                                      <asp:ListItem Text="A2" Value="A2" />
                                    </asp:DropDownList>
                                 </div>
                                 <label>Publish Date</label>
@@ -110,24 +129,20 @@
                                       <asp:ListItem Text="Self Help" Value="Self Help" />
                                       <asp:ListItem Text="Motivation" Value="Motivation" />
                                       <asp:ListItem Text="Healthy Living" Value="Healthy Living" />
-                                      <asp:ListItem Text="Wellness" Value="Wellness" />
                                       <asp:ListItem Text="Crime" Value="Crime" />
                                       <asp:ListItem Text="Drama" Value="Drama" />
                                       <asp:ListItem Text="Fantasy" Value="Fantasy" />
                                       <asp:ListItem Text="Horror" Value="Horror" />
                                       <asp:ListItem Text="Poetry" Value="Poetry" />
-                                      <asp:ListItem Text="Personal Development" Value="Personal Development" />
                                       <asp:ListItem Text="Romance" Value="Romance" />
                                       <asp:ListItem Text="Science Fiction" Value="Science Fiction" />
                                       <asp:ListItem Text="Suspense" Value="Suspense" />
                                       <asp:ListItem Text="Thriller" Value="Thriller" />
                                       <asp:ListItem Text="Art" Value="Art" />
                                       <asp:ListItem Text="Autobiography" Value="Autobiography" />
-                                      <asp:ListItem Text="Encyclopedia" Value="Encyclopedia" />
                                       <asp:ListItem Text="Health" Value="Health" />
                                       <asp:ListItem Text="History" Value="History" />
                                       <asp:ListItem Text="Math" Value="Math" />
-                                      <asp:ListItem Text="Textbook" Value="Textbook" />
                                       <asp:ListItem Text="Science" Value="Science" />
                                       <asp:ListItem Text="Travel" Value="Travel" />
                                    </asp:ListBox>
@@ -261,18 +276,18 @@
                                 <asp:GridView class="table table-striped table-bordered" 
                                     ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1">
                                     <Columns>
-                                        <asp:BoundField DataField="book_id" HeaderText="book_id" ReadOnly="True" SortExpression="book_id" />
-                                        <asp:BoundField DataField="book_name" HeaderText="book_name" SortExpression="book_name" />
-                                        <asp:BoundField DataField="genre" HeaderText="genre" SortExpression="genre" />
-                                        <asp:BoundField DataField="author_name" HeaderText="author_name" SortExpression="author_name" />
-                                        <asp:BoundField DataField="publisher_name" HeaderText="publisher_name" SortExpression="publisher_name" />
-                                        <asp:BoundField DataField="language" HeaderText="language" SortExpression="language" />
-                                        <asp:BoundField DataField="edition" HeaderText="edition" SortExpression="edition" />
-                                        <asp:BoundField DataField="cost" HeaderText="cost" SortExpression="cost" />
-                                        <asp:BoundField DataField="pages" HeaderText="pages" SortExpression="pages" />
-                                        <asp:BoundField DataField="book_description" HeaderText="book_description" SortExpression="book_description" />
-                                        <asp:BoundField DataField="actual_stock" HeaderText="actual_stock" SortExpression="actual_stock" />
-                                        <asp:BoundField DataField="current_stock" HeaderText="current_stock" SortExpression="current_stock" />
+                                        <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" />
+                                        <asp:BoundField DataField="book_name" HeaderText="Tên sách" SortExpression="book_name" />
+                                        <asp:BoundField DataField="genre" HeaderText="Thể loại" SortExpression="genre" />
+                                        <asp:BoundField DataField="author_name" HeaderText="Tác giả" SortExpression="author_name" />
+                                        <asp:BoundField DataField="publisher_name" HeaderText="Nhà phát hành" SortExpression="publisher_name" />
+                                        <asp:BoundField DataField="language" HeaderText="Ngôn ngữ" SortExpression="language" />
+                                        <asp:BoundField DataField="edition" HeaderText="Edition" SortExpression="edition" />
+                                        <asp:BoundField DataField="cost" HeaderText="Giá" SortExpression="cost" />
+                                        <asp:BoundField DataField="pages" HeaderText="Số trang" SortExpression="pages" />
+                                        <asp:BoundField DataField="book_description" HeaderText="Mô tả" SortExpression="book_description" />
+                                        <asp:BoundField DataField="actual_stock" HeaderText="Nhập vào" SortExpression="actual_stock" />
+                                        <asp:BoundField DataField="current_stock" HeaderText="Hiện có" SortExpression="current_stock" />
                                         <asp:BoundField DataField="book_img_link" HeaderText="book_img_link" SortExpression="book_img_link" />
                                     </Columns>
                                 </asp:GridView>
