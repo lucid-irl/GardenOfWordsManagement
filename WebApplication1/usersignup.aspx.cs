@@ -41,6 +41,8 @@ namespace WebApplication1
             return TextBox8.Text.Equals(TextBox9.Text);
         }
 
+
+
         // kiểm tra tên đăng nhập có tồn tại chưa
         bool checkMemberExist()
         {

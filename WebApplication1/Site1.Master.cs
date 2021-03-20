@@ -135,6 +135,7 @@ namespace WebApplication1
             LinkButton8.Visible = false;  // book invent
             LinkButton5.Visible = false;  // order manager
             LinkButton10.Visible = false;  // member manager
+            Response.Redirect("homepage.aspx");
         }
     }
 }

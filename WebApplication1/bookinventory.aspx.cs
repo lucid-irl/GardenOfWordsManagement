@@ -156,10 +156,10 @@ namespace WebApplication1
                 cmd.Parameters.AddWithValue("@author_name", DropDownList3.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@publisher_name", DropDownList2.SelectedItem.Value);
 
+                
+                cmd.Parameters.AddWithValue("@publish_date", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
 
-                cmd.Parameters.AddWithValue("@publish_date", TextBox4.Text.Trim());
-                
                 cmd.Parameters.AddWithValue("@edition", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@cost", TextBox6.Text.Trim());
                 cmd.Parameters.AddWithValue("@pages", TextBox9.Text.Trim());
@@ -167,11 +167,6 @@ namespace WebApplication1
                 cmd.Parameters.AddWithValue("@actual_stock", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@current_stock", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_img_link", filepath);
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<script>alert('Book added successfully.');</script>");
-                GridView1.DataBind();
 
                 cmd.ExecuteNonQuery();
                 con.Close();
