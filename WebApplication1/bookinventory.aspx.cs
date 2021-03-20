@@ -146,7 +146,7 @@ namespace WebApplication1
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO book_master_tbl (book_id,book_name,genre,author_name,publisher_name,language,edition,cost,pages,book_description,actual_stock,current_stock,book_img_link) values (@book_id,@book_name,@genre,@author_name,@publisher_name,@language,@edition,@cost,@pages,@book_description,@actual_stock,@current_stock,@book_img_link)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO book_master_tbl (book_id,book_name,genre,author_name,publisher_name,publisher_date,language,edition,cost,pages,book_description,actual_stock,current_stock,book_img_link) values (@book_id,@book_name,@genre,@author_name,@publisher_name,@publisher_name,@language,@edition,@cost,@pages,@book_description,@actual_stock,@current_stock,@book_img_link)", con);
 
                 cmd.Parameters.AddWithValue("@book_id", TextBox7.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_name", TextBox8.Text.Trim());
@@ -155,6 +155,7 @@ namespace WebApplication1
 
                 cmd.Parameters.AddWithValue("@author_name", DropDownList3.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@publisher_name", DropDownList2.SelectedItem.Value);
+
                 cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
 
                 cmd.Parameters.AddWithValue("@publish_date", TextBox4.Text.Trim());

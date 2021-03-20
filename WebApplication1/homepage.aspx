@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <center>
-                    <img width="150px" src="imgs/bookstore/018-books.png" />
+                    <img width="150" src="imgs/bookstore/018-books.png" />
                     <h4>Tham quan</h4>
                     <p class="text-justify">Chúng tôi sẽ cho bạn chiêm ngưỡng kho tàng sách 
                         đồ sộ của chúng tôi. Tất cả thông tin về sách sẽ ở đây.
@@ -32,7 +32,7 @@
 
                 <div class="col-md-4">
                     <center>
-                    <img width="150px" src="imgs/bookstore/008-book.png" />
+                    <img width="150" src="imgs/bookstore/008-book.png" />
                     <h4>Tìm kiếm</h4>
                     <p class="text-justify">Bấm vào đây để tìm kiếm sách. 
                         Tất cả các đầu sách sẽ ở trong này. 
@@ -43,7 +43,7 @@
 
                 <div class="col-md-4">
                     <center>
-                    <img width="150px" src="imgs/bookstore/002-bookstore.png" />
+                    <img width="150" src="imgs/bookstore/002-bookstore.png" />
                     <h4>Nhà phát hành</h4>
                     <p class="text-justify">Đây là danh sách những nhà phát hành sách. 
                         Tất cả thông tin của NPH sẽ được trình bày và cập nhật trong này.
