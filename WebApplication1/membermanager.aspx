@@ -14,7 +14,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <div class="card">
                     <div class="card-body">
@@ -178,7 +178,7 @@
                 <a href="homepage.aspx"><< Back to home</a><br /><br />
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">
 
@@ -203,11 +203,12 @@
                                     ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="member_id" DataSourceID="SqlDataSource1">
                                     <Columns>
                                         <asp:BoundField DataField="member_id" HeaderText="ID" ReadOnly="True" SortExpression="member_id" />
-                                        <asp:BoundField DataField="full_name" HeaderText="Tên" SortExpression="full_name" />
+                                        <asp:BoundField DataField="full_name" HeaderText="Họ Tên" SortExpression="full_name" />
                                         <asp:BoundField DataField="account_status" HeaderText="Trạng thái" SortExpression="account_status" />
-                                        <asp:BoundField DataField="phone" HeaderText="SĐT" SortExpression="phone" />
+                                        <asp:BoundField DataField="phone" HeaderText="Phone" SortExpression="phone" />
                                         <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" />
-                                        <asp:BoundField DataField="city" HeaderText="Thành phố" SortExpression="city" />
+                                        <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
+                                        <asp:BoundField DataField="order_id" HeaderText="Order ID" SortExpression="order_id" />
                                     </Columns>
                                 </asp:GridView>
                             </div>

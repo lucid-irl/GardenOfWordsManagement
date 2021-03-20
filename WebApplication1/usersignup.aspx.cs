@@ -87,6 +87,10 @@ namespace WebApplication1
         void signUpNewMember()
         {
             //Response.Write("<script>alert('Testing');</script>");
+            // Generate a random number  
+            Random random = new Random();
+            // Any random integer   
+            int num = random.Next(10000);
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -96,7 +100,7 @@ namespace WebApplication1
                 }
                 
                     
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl (full_name,dob,phone,email,city,state,sex,address,member_id,password,account_status) values (@full_name,@dob,@phone,@email,@city,@state,@sex,@address,@member_id,@password,@account_status)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl (full_name,dob,phone,email,city,state,sex,address,member_id,password,account_status,order_id) values (@full_name,@dob,@phone,@email,@city,@state,@sex,@address,@member_id,@password,@account_status,@order_id)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@phone", TextBox3.Text.Trim());
@@ -108,6 +112,7 @@ namespace WebApplication1
                 cmd.Parameters.AddWithValue("@member_id", TextBox7.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@account_status", "pending");
+                cmd.Parameters.AddWithValue("@order_id", num);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -119,5 +124,6 @@ namespace WebApplication1
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
     }
 }

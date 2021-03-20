@@ -115,7 +115,7 @@
                                                                         </div>
 
                                                                         <div class="col-lg-2">
-                                                                            <asp:Image class="img-fluid p-2" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
+                                                                            <asp:Image class="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
                                                                         </div>
 
                                                                     </div>
