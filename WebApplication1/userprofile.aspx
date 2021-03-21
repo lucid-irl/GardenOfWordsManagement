@@ -262,8 +262,18 @@
 
                         <div class="row">
                             <div class="col">
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:gardenofwordsConnectionString %>" SelectCommand="SELECT * FROM [order_master_tbl]"></asp:SqlDataSource>
                                 <asp:GridView class="table table-striped table-bordered" 
-                                    ID="GridView1" runat="server"></asp:GridView>
+                                    ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="order_id" DataSourceID="SqlDataSource1">
+                                    <Columns>
+                                        <asp:BoundField DataField="member_id" HeaderText="member_id" SortExpression="member_id" />
+                                        <asp:BoundField DataField="member_name" HeaderText="member_name" SortExpression="member_name" />
+                                        <asp:BoundField DataField="order_id" HeaderText="order_id" ReadOnly="True" SortExpression="order_id" />
+                                        <asp:BoundField DataField="order_cost" HeaderText="order_cost" SortExpression="order_cost" />
+                                        <asp:BoundField DataField="order_day" HeaderText="order_day" SortExpression="order_day" />
+                                        <asp:BoundField DataField="order_status" HeaderText="order_status" SortExpression="order_status" />
+                                    </Columns>
+                                </asp:GridView>
                             </div>
                         </div>
 

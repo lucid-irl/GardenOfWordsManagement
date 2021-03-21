@@ -32,16 +32,6 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                        <div class="row">
-                                            <div class="col">
-                                                <hr />
-                                            </div>
-                                        </div>
 
                                         <div class="row">
 
@@ -115,7 +105,11 @@
                                                                         </div>
 
                                                                         <div class="col-lg-2">
+                                                                            
                                                                             <asp:Image class="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
+                                                                            <br />
+                                                                            <asp:LinkButton class="btn btn-warning" ID="LinkButton13" runat="server">
+                                                                                Thêm vào giỏ<i class="fas fa-shopping-cart"></i></asp:LinkButton>
                                                                         </div>
 
                                                                     </div>
@@ -130,10 +124,7 @@
                                             </div>
                                         </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    
 
                     </div>
                 </div>

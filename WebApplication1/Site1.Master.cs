@@ -20,6 +20,7 @@ namespace WebApplication1
 
                     LinkButton3.Visible = false;  // log out
                     LinkButton7.Visible = false;  // hello
+                    LinkButton9.Visible = false;  // cart
 
                     LinkButton6.Visible = true;  // admin login
                     LinkButton11.Visible = false;  // author manager
@@ -33,6 +34,7 @@ namespace WebApplication1
                 {
                     LinkButton1.Visible = false;  // user login
                     LinkButton2.Visible = false;  // user sign up
+                    LinkButton9.Visible = true;  // cart
 
                     LinkButton3.Visible = true;  // log out
                     LinkButton7.Visible = true;  // hello
@@ -50,6 +52,7 @@ namespace WebApplication1
                 {
                     LinkButton1.Visible = false;  // user login
                     LinkButton2.Visible = false;  // user sign up
+                    LinkButton9.Visible = false;  // cart
 
                     LinkButton3.Visible = true;  // log out
                     LinkButton7.Visible = true;  // hello
@@ -125,6 +128,7 @@ namespace WebApplication1
 
             LinkButton1.Visible = true;  // user login
             LinkButton2.Visible = true;  // user sign up
+            LinkButton9.Visible = false;  // cart
 
             LinkButton3.Visible = false;  // log out
             LinkButton7.Visible = false;  // hello
@@ -136,6 +140,17 @@ namespace WebApplication1
             LinkButton5.Visible = false;  // order manager
             LinkButton10.Visible = false;  // member manager
             Response.Redirect("homepage.aspx");
+        }
+
+        protected void LinkButton9_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("usercart.aspx");
+        }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            
+            Response.Redirect("userprofile.aspx");
         }
     }
 }

@@ -77,23 +77,27 @@
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">
-                                View Books</asp:LinkButton>
+                                Xem sách</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">
+                                Giỏ hàng</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
-                                User Login</asp:LinkButton>
+                                Đăng nhập</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">
-                                Sign Up</asp:LinkButton>
+                                Đăng kí</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False">
-                                Hello user</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">
+                                Xin chào</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">
-                                Logout</asp:LinkButton>
+                                Đăng xuất</asp:LinkButton>
                         </li>
                         
                     </ul>
@@ -115,17 +119,17 @@
                     <div class="col-xs-11 col-sm-11 col-md-12 text-center">
                         <p >
                             <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" ForeColor="#424949" OnClick="LinkButton6_Click">
-                                Admin Login</asp:LinkButton>
+                                --Admin Login--</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" ForeColor="#424949" OnClick="LinkButton11_Click" Visible="False">
-                                Author Management</asp:LinkButton>
+                                -Author Management-</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" ForeColor="#424949" OnClick="LinkButton12_Click" Visible="False">
-                                Publisher Management</asp:LinkButton>
+                                -Publisher Management-</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" ForeColor="#424949" OnClick="LinkButton8_Click" Visible="False">
-                                Book Invent</asp:LinkButton>
+                                -Book Invent-</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" ForeColor="#424949" OnClick="LinkButton5_Click" Visible="False">
-                                Order Infomation</asp:LinkButton>
+                                -Order Infomation-</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" ForeColor="#424949" OnClick="LinkButton10_Click" Visible="False">
-                                Member Management</asp:LinkButton>
+                                -Member Management-</asp:LinkButton>
                         </p>
                     </div>
                 </div>
