@@ -65,6 +65,7 @@
                                     <asp:TextBox class="form-control" ID="TextBox9" runat="server" 
                                         TextMode="Password"></asp:TextBox>
                                 </div>
+                                <span ID="noti"></span>
                             </div>
                         </div>
 
@@ -283,6 +284,32 @@
             </div>
 
         </div>
+        <script>
+            document.getElementById('ContentPlaceHolder1_TextBox9').onkeyup = function () {
+                if (document.getElementById('ContentPlaceHolder1_TextBox8').value ==
+                    document.getElementById('ContentPlaceHolder1_TextBox9').value) {
+                    document.getElementById('noti').style.color = 'green';
+                    document.getElementById('noti').innerHTML = 'Mật khẩu trùng khớp';
+                    document.getElementById('ContentPlaceHolder1_Button1').disabled = false;
+                } else {
+                    document.getElementById('noti').style.color = 'red';
+                    document.getElementById('noti').innerHTML = 'Mật khẩu không trùng khớp';
+                    document.getElementById('ContentPlaceHolder1_Button1').disabled = true;
+                }
+            };
+            document.getElementById('ContentPlaceHolder1_TextBox8').onkeyup = function () {
+                if (document.getElementById('ContentPlaceHolder1_TextBox8').value ==
+                    document.getElementById('ContentPlaceHolder1_TextBox9').value) {
+                    document.getElementById('noti').style.color = 'green';
+                    document.getElementById('noti').innerHTML = 'Mật khẩu trùng khớp';
+                    document.getElementById('ContentPlaceHolder1_Button1').disabled = false;
+                } else {
+                    document.getElementById('noti').style.color = 'red';
+                    document.getElementById('noti').innerHTML = 'Mật khẩu không trùng khớp';
+                    document.getElementById('ContentPlaceHolder1_Button1').disabled = true;
+                }
+            };
+        </script>
     </div>
 
 </asp:Content>

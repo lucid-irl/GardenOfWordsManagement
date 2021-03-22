@@ -40,7 +40,7 @@ namespace WebApplication1
                     LinkButton7.Visible = true;  // hello
                     LinkButton7.Text = "Xin chào " + Session["username"].ToString();
 
-                    LinkButton6.Visible = true;  // admin login
+                    LinkButton6.Visible = false;  // admin login
                     LinkButton11.Visible = false;  // author manager
                     LinkButton12.Visible = false;  // publisher manager
                     LinkButton8.Visible = false;  // book invent
