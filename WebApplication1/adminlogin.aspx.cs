@@ -41,6 +41,7 @@ namespace WebApplication1
                         Session["username"] = dr.GetValue(0).ToString();
                         Session["fullname"] = dr.GetValue(2).ToString();
                         Session["role"] = "admin";
+                        
 
                     }
                     Response.Redirect("homepage.aspx");
@@ -56,5 +57,7 @@ namespace WebApplication1
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
+
     }
 }

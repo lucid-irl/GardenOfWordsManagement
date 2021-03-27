@@ -42,7 +42,7 @@ namespace WebApplication1
                         Session["fullname"] = dr.GetValue(8).ToString();
                         Session["role"] = "user";
                         Session["status"] = dr.GetValue(10).ToString();
-
+                        Session["cart_id"] = dr.GetValue(11).ToString();
                     }
 
                     Response.Redirect("homepage.aspx");

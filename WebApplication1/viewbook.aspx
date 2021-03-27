@@ -6,8 +6,6 @@
            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
        });
 
-       
-
     </script>
 
 </asp:Content>
@@ -77,7 +75,7 @@
                                                                                     &nbsp;|| Số trang:
                                                                                     <asp:Label ID="Label7" runat="server" Font-Bold="True" Text='<%# Eval("pages") %>'></asp:Label>
                                                                     
-                                                                                </div>
+                                                                                    &nbsp;</div>
                                                                             </div>
 
                                                                             <div class="row">
@@ -108,7 +106,7 @@
                                                                             
                                                                             <asp:Image class="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
                                                                             <br />
-                                                                            <asp:LinkButton class="btn btn-warning" ID="LinkButton13" runat="server">
+                                                                            <asp:LinkButton class="btn btn-warning" ID="LinkButton13" runat="server" OnClick="LinkButton13_Click">
                                                                                 Thêm vào giỏ<i class="fas fa-shopping-cart"></i></asp:LinkButton>
                                                                         </div>
 

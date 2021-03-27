@@ -1747,7 +1747,7 @@
     <Content Include="imgs\thumpmail_3.png" />
     <Content Include="imgs\writer.png" />
     <Content Include="membermanager.aspx" />
-    <Content Include="ordermanager.aspx" />
+    <Content Include="billmanager.aspx" />
     <Content Include="publishermanager.aspx" />
     <Content Include="usercart.aspx" />
     <Content Include="userlogin.aspx" />
@@ -1793,12 +1793,12 @@
     <Compile Include="membermanager.aspx.designer.cs">
       <DependentUpon>membermanager.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ordermanager.aspx.cs">
-      <DependentUpon>ordermanager.aspx</DependentUpon>
+    <Compile Include="billmanager.aspx.cs">
+      <DependentUpon>billmanager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ordermanager.aspx.designer.cs">
-      <DependentUpon>ordermanager.aspx</DependentUpon>
+    <Compile Include="billmanager.aspx.designer.cs">
+      <DependentUpon>billmanager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="publishermanager.aspx.cs">

@@ -69,7 +69,7 @@
                           <a class="dropdown-item" href="#">Top picks</a>
                           <a class="dropdown-item" href="#">Tâm lý</a>
                           <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Sách trưng bày! <br />(nghĩa là đéo bán)<br /></a>
+                          <a class="dropdown-item" href="#">Sách trưng bày!</a>
                         </div>
                       </li>
                     </ul>
@@ -127,7 +127,7 @@
                             <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" ForeColor="#424949" OnClick="LinkButton8_Click" Visible="False">
                                 -Book Invent-</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" ForeColor="#424949" OnClick="LinkButton5_Click" Visible="False">
-                                -Order Infomation-</asp:LinkButton>
+                                -Bill Management-</asp:LinkButton>
                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" ForeColor="#424949" OnClick="LinkButton10_Click" Visible="False">
                                 -Member Management-</asp:LinkButton>
                         </p>
@@ -138,7 +138,7 @@
             <div id="footer2" class="container-fluid">
                 <div class="row" >
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p>&copy All copyright is đéo có! <a class="footerlinks" href="https://www.facebook.com/kietchay100"
+                        <p>&copy All copyright is của: <a class="footerlinks" href="https://www.facebook.com/kietchay100"
                             style="color:#BDC3C7" target="_blank">Trần Huy Hoàng</a></p>
                     </div>
                 </div>

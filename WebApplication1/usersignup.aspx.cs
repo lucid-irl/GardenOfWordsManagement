@@ -100,7 +100,7 @@ namespace WebApplication1
                 }
                 
                     
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl (full_name,dob,phone,email,city,state,sex,address,member_id,password,account_status,order_id) values (@full_name,@dob,@phone,@email,@city,@state,@sex,@address,@member_id,@password,@account_status,@order_id)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl (full_name,dob,phone,email,city,state,sex,address,member_id,password,account_status,cart_id) values (@full_name,@dob,@phone,@email,@city,@state,@sex,@address,@member_id,@password,@account_status,@cart_id)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@phone", TextBox3.Text.Trim());
@@ -112,7 +112,7 @@ namespace WebApplication1
                 cmd.Parameters.AddWithValue("@member_id", TextBox7.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@account_status", "pending");
-                cmd.Parameters.AddWithValue("@order_id", num);
+                cmd.Parameters.AddWithValue("@cart_id", num);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -124,6 +124,35 @@ namespace WebApplication1
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
+        //void addUserToCart()
+        //{
+        //    try
+        //    {
+        //        SqlConnection con = new SqlConnection(strcon);
+        //        if (con.State == ConnectionState.Closed)
+        //        {
+        //            con.Open();
+        //        }
+
+
+        //        SqlCommand cmd = new SqlCommand("INSERT INTO cart_tbl (cart_id, member_id) values (@cart_id, @member_id)", con);
+        //        cmd.Parameters.AddWithValue("@cart_id", TextBox1.Text.Trim());
+                
+        //        cmd.Parameters.AddWithValue("@member_id", TextBox7.Text.Trim());
+                
+        //        cmd.Parameters.AddWithValue("@cart_id", num);
+
+        //        cmd.ExecuteNonQuery();
+        //        con.Close();
+                
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Response.Write("<script>alert('" + ex.Message + "');</script>");
+        //    }
+        //}
 
     }
 }

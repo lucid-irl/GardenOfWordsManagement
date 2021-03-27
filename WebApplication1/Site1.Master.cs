@@ -96,7 +96,7 @@ namespace WebApplication1
 
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ordermanager.aspx");
+            Response.Redirect("billmanager.aspx");
         }
 
         protected void LinkButton10_Click(object sender, EventArgs e)
