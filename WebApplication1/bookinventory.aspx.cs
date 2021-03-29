@@ -166,7 +166,6 @@ namespace WebApplication1
                             if (ListBox1.Items[j].ToString() == genre[i])
                             {
                                 ListBox1.Items[j].Selected = true;
-
                             }
 
                         }

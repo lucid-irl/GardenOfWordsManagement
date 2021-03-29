@@ -263,16 +263,16 @@
 
                         <div class="row">
                             <div class="col">
-                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:gardenofwordsConnectionString %>" SelectCommand="SELECT * FROM [order_master_tbl]"></asp:SqlDataSource>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:gardenofwordsConnectionString %>" SelectCommand="SELECT DISTINCT [book_id], [quantity] FROM [cart_items_tbl] WHERE ([cart_id] = @cart_id)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="cart_id" SessionField="cart_id" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                                 <asp:GridView class="table table-striped table-bordered" 
-                                    ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="order_id" DataSourceID="SqlDataSource1">
+                                    ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                                     <Columns>
-                                        <asp:BoundField DataField="member_id" HeaderText="member_id" SortExpression="member_id" />
-                                        <asp:BoundField DataField="member_name" HeaderText="member_name" SortExpression="member_name" />
-                                        <asp:BoundField DataField="order_id" HeaderText="order_id" ReadOnly="True" SortExpression="order_id" />
-                                        <asp:BoundField DataField="order_cost" HeaderText="order_cost" SortExpression="order_cost" />
-                                        <asp:BoundField DataField="order_day" HeaderText="order_day" SortExpression="order_day" />
-                                        <asp:BoundField DataField="order_status" HeaderText="order_status" SortExpression="order_status" />
+                                        <asp:BoundField DataField="book_id" HeaderText="book_id" SortExpression="book_id" />
+                                        <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
                                     </Columns>
                                 </asp:GridView>
                             </div>

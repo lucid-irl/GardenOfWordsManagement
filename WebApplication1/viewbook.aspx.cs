@@ -99,7 +99,7 @@ namespace WebApplication1
                 }
                 else
                 {
-                    Response.Write("<script>alert('Sai tên đăng nhập hoặc mật khẩu!');</script>");
+                    Response.Write("<script>alert('Không tìm thấy sách');</script>");
                 }
                 con.Close();
 
